@@ -13,6 +13,6 @@ z = "I like turtles!"
 # x is 10, y is 2.25, z is "I like turtles!"
 print('x is %i,' % x, "y is %g," % round(y, 2), 'z is "%s"' % z) 
 # Use the 'format' string method to print the same thing
-print('x is {},'.format(x), 'y is {},'.format(round(y, 2)), 'z is "{}"'.format(z))
+print('x is {},'.format(x), 'y is {:.2f},'.format(y), 'z is "{}"'.format(z))
 # Finally, print the same thing using an f-string
 print(f'x is {x},' f' y is {round(y, 2)},' f' z is "{z}"')
