@@ -22,3 +22,25 @@ and does the following:
 import sys
 import calendar
 from datetime import datetime
+from datetime import date
+
+c = calendar.TextCalendar(calendar.SUNDAY)
+now = datetime.now()
+str = c.formatmonth(now.year, now.month)
+
+year_month = input("month and year: 00/0000 format")
+
+try:
+  if (len(year_month) == 0):
+    str = c.formatmonth(now.year, now.month)
+    print(str)
+  elif '/' in year_month:
+    new_date = year_month.split('/')
+    # print(new_date)
+    str = c.formatmonth(int(new_date[1]), int(new_date[0]))
+    print(str)
+  elif '/' not in year_month:
+    str = c.formatmonth(now.year, int(year_month))
+    print(str)
+except:
+  print('wrong format')
